@@ -10,12 +10,19 @@ Login to your OpenWebUI and get an API key for the user.
 
 Modify scripts/api.js with your openwebui url and api key and model:
 
+
 class OpenWebUIAPI {
+
   constructor() {
+  
     this.baseUrl = '**https://openwebui-url.local:8080**';
+    
     this.model = '**llama-3.3-70b-versatile**';
+    
     this.apiKey = '**sk-USER-API-KEY**';
+    
   }
+
 
 Modify line 3 of scripts/background.js
 
