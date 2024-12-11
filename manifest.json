@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "SJEimple Chat Overlay",
+  "version": "1.0",
+  "description": "Adds a simple chat overlay",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://ai.sjedow.catholic.edu.au/*",
+    "https://*.catholic.edu.au/*"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles/overlay.css"],
+      "js": ["scripts/api.js", "scripts/overlay.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
