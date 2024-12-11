@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="23" fill="#4A90E2" stroke="#2171CD" stroke-width="2"/>
+  <!-- Chat bubble -->
+  <path d="M12 20a1.5 1.5 0 0 1 1.5-1.5h21a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5h-7.5l-6 6-6-6h-1.5a1.5 1.5 0 0 1-1.5-1.5v-12z" fill="white"/>
+</svg>
