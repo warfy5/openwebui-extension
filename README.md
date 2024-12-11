@@ -1,43 +1,46 @@
-# openwebui-extension
-A custom openweb ui extension for google chrome. 
-Prerquisites:
-OpenWebUI Server, with a valid AI Model, and API access enabled. 
+# OpenWebUI Extension
 
-This is a work in progress. Expect very little form this extension. It does however work, just not well. 
+A custom Chrome extension for OpenWebUI integration. 
 
-Instructions:
-Login to your OpenWebUI and get an API key for the user. 
+## Overview
 
-Modify scripts/api.js with your openwebui url and api key and model:
+This extension enables direct interaction with your OpenWebUI server through Google Chrome. Please note that this is a work in progress with limited functionality, though the core features are operational.
 
+## Prerequisites
 
+- OpenWebUI Server
+- Valid AI Model
+- API access enabled
+
+## Setup Instructions
+
+1. Login to your OpenWebUI and obtain a user API key
+
+2. Modify `scripts/api.js` with your configuration:
+```javascript
 class OpenWebUIAPI {
-
   constructor() {
-  
-    this.baseUrl = '**https://openwebui-url.local:8080**';
-    
-    this.model = '**llama-3.3-70b-versatile**';
-    
-    this.apiKey = '**sk-USER-API-KEY**';
-    
+    this.baseUrl = 'https://openwebui-url.local:8080';
+    this.model = 'llama-3.3-70b-versatile';
+    this.apiKey = 'sk-USER-API-KEY';
   }
+```
 
+3. Update `scripts/background.js` line 3 with your OpenWebUI URL
 
-Modify line 3 of scripts/background.js
+## Planned Features
 
-to be your openwebui url. 
+- Chat synchronization with OpenWebUI
+- Current tab content awareness
+- Automatic API key retrieval
+- Image generation capabilities
+- Form auto-fill using OpenWebUI memory
 
-Feel free to contribute if you would like to assist. 
+## Future Integration Goals
 
-Planned Features:
-  - Save chats to OpenWebUI as if interacting directly.
-  - Read information on the current tab open.
-  - Automatically retrieve users own personal API key.
-  - Generate images.
-  - Pre-fill forms with memory from openwebui.
+- Speech integration
+- Voice integration
 
-Hopeful integration:
-  - Speech integration
-  - Voice integration
+## Contributing
 
+Contributions are welcome! Feel free to help improve this extension.
